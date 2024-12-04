@@ -1,0 +1,519 @@
+/* Global Styles */
+body {
+    margin: 0;
+    font-family: "Outfit", sans-serif;
+}
+
+html {
+    scroll-behavior: smooth; /* Smooth scrolling */
+}
+
+/* Navbar Styles */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 40px; /* Add more horizontal padding for desktop */
+    background-color: #151515;
+    color: white;
+    position: fixed; /* Fixed at the top */
+    width: 100%;
+    z-index: 1000;
+    box-sizing: border-box; /* Include padding in the total width */
+}
+
+.logo a {
+    text-decoration: none;
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+/* Menu Styles */
+.menu {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.menu li {
+    margin: 0 25px;
+}
+
+.menu a {
+    text-decoration: none;
+    color: white; /* Default text color */
+    font-size: 18px;
+    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transitions */
+    outline: none; /* Remove the default focus outline */
+}
+
+.menu a:hover {
+    color: red;
+}
+
+
+.menu a:focus {
+    color: white; /* Reset to default text color when focused */
+    outline: none; /* Optional: Remove browser's default outline */
+}
+
+.menu a:active {
+    color: white !important;
+}
+/* Hero Section Styles */
+.hero {
+    padding: 100px 20px; /* Add top padding to prevent content from hiding under the navbar */
+    background: linear-gradient(180deg, #151515, #757575); /* Optional background */
+    color: white;
+}
+
+.hero-content {
+    display: flex; /* Align items horizontally */
+    align-items: center; /* Vertically align the image and text */
+    justify-content: center; /* Center both elements together within the hero section */
+    gap: 20px; /* Add space between the image and text */
+}
+
+.myimg img {
+    width: 400px; /* Set image width */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 10%; /* Circular style */
+}
+
+.text-content {
+    flex: 1; /* Allow text content to grow and take up available space */
+    max-width: 600px; /* Restrict the width of the text area */
+}
+
+.text-content h1 {
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+.text-content p {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.cta-button {
+    padding: 10px 20px;
+    background-color: #ffffff; /* Default background color */
+    color: #151515; /* Default text color */
+    font-size: 18px;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transitions */
+}
+
+.cta-button:hover {
+    background-color: #ff0000; /* Red background on hover */
+    color: #ffffff; /* White text on hover for readability */
+}
+
+.cta-button:active {
+    background-color: #cc0000; /* Slightly darker red when pressed */
+    color: #ffffff; /* Maintain white text on active state */
+}
+
+.cta-button:focus {
+    background-color: #ffffff; /* Ensure it resets to the default */
+    color: #151515; /* Default text color */
+    outline: none; /* Optional: Remove the browser's default focus outline */
+}
+
+/* About Me Section */
+.aboutme {
+    padding: 50px 20px;
+    background: linear-gradient(0deg, #151515, #757575); /* Light background for contrast */
+    color: white; /* Darker text color for readability */
+}
+
+.aboutme h2 {
+    text-align: center;
+    font-size: 36px;
+    margin-bottom: 30px;
+    color: #ffffff; /* Match navbar color for consistency */
+}
+
+.about-content {
+    display: flex; /* Align image and text side by side */
+    align-items: center; /* Vertical alignment */
+    gap: 20px; /* Add spacing between the elements */
+}
+
+.about-text {
+    flex: 1; /* Make text take up available space */
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+/* Skills Section */
+.skills {
+    padding: 50px 20px;
+    background: linear-gradient(180deg, #151515, #757575); /* Light background for contrast */
+    color: #333;
+    text-align: center;
+}
+
+.skills h2 {
+    font-size: 36px;
+    margin-bottom: 30px;
+    color: white;
+}
+
+.skills-content {
+    display: flex;
+    flex-wrap: wrap; /* Wrap items on smaller screens */
+    justify-content: space-around; /* Distribute skill categories */
+    gap: 30px;
+}
+
+.skill-category {
+    flex: 1 1 300px; /* Responsive sizing */
+    max-width: 400px;
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: left;
+}
+
+.skill-category h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #151515;
+}
+
+.skill-category p {
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.skill-list {
+    list-style: none;
+    padding: 0;
+    margin-top: 20px;
+}
+
+.skill-list li {
+    margin-bottom: 15px;
+}
+
+.skill-list span {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #151515;
+}
+
+.skill-bar {
+    background-color: #e0e0e0;
+    height: 10px;
+    border-radius: 5px;
+    overflow: hidden;
+    position: relative;
+}
+
+.skill-level {
+    background-color: #ffcc00;
+    height: 100%;
+    border-radius: 5px;
+}
+
+/* Projects Section */
+.projects {
+    background: linear-gradient(0deg, #151515, #757575);
+    padding: 40px;
+    text-align: center;
+}
+
+.projects h1 {
+    font-size: 36px;
+    margin-bottom: 30px;
+    color: white;
+}
+
+
+.projects h3 {
+    font-size: 36px;
+    margin-bottom: 30px;
+    color: white;
+}
+
+
+.projects .project-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.projects p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #666;
+}
+
+/* Contact Section */
+.contacts {
+    background: linear-gradient(180deg, #151515, #757575);
+    padding: 40px;
+    text-align: center;
+}
+
+.contacts h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color:white;
+}
+
+.contact-info p {
+    font-size: 1.2rem;
+    color:white;
+}
+
+.contact-info span {
+    font-weight: bold;
+}
+
+.social-media {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;  /* Centers the social media icons horizontally */
+    gap: 15px;  /* Adds space between the icons */
+}
+
+/* Style the social media icons */
+.social-icon {
+    font-size: 2rem;  /* Adjust the size of the icons */
+    color: white;     /* Default color is white */
+    transition: color 0.3s ease;  /* Smooth color transition when hovered */
+}
+
+.social-icon:hover {
+    color: red;  /* Change the color to red on hover */
+}
+
+/* Footer Section */
+.footer {
+    background-color: #757575;  /* Dark background */
+    color: rgb(0, 0, 0);  /* White text */
+    text-align: center;  /* Center the text */
+    padding: 20px 0;  /* Padding for space around text */
+    margin-top: 0px;  /* Adds some space above the footer */
+}
+
+.footer p {
+    font-size: 1rem;  /* Text size */
+    margin: 5px 0;  /* Spacing between lines */
+}
+
+.footer p:last-child {
+    font-size: 0.9rem;  /* Slightly smaller text for the second line */
+}
+
+
+
+/* Responsive Design */
+/* Responsive Design for Tablet */
+@media (max-width: 992px) {
+    .menu {
+        display: none; /* Hide desktop menu */
+    }
+
+    .navbar {
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+
+    .navbar .logo {
+        flex: 1;
+    }
+
+    .hero-content {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+
+.burger {
+    display: none; /* Hide by default */
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 20px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    position: absolute; /* Position it relative to the navbar */
+    top: 15px; /* Adjust the vertical alignment */
+    right: 20px; /* Adjust distance from the right edge */
+    z-index: 1010; /* Ensure it's above other elements */
+}
+
+.burger span {
+    display: block;
+    height: 3px;
+    width: 100%;
+    background: white;
+    border-radius: 2px;
+    transition: all 0.3s ease;
+}
+
+.menu {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+/* Responsive Design for Mobile */
+@media (max-width: 768px) {
+    .hero-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .myimg img {
+        max-width: 80%;
+        margin: 0 auto;
+    }
+
+    .text-content {
+        padding: 0 10px;
+    }
+
+    .about-content,
+    .skills-content {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .skill-category {
+        max-width: 90%;
+        margin: 0 auto;
+    }
+
+    .projects h1 {
+        font-size: 28px;
+    }
+
+    .projects h3 {
+        font-size: 20px;
+    }
+
+    .footer {
+        font-size: 14px;
+    }
+}
+
+/* Responsive Design for Extra Small Devices */
+@media (max-width: 576px) {
+    .navbar {
+        padding: 10px;
+    }
+
+    .menu {
+        display: none;
+    }
+
+    .hero-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .myimg img {
+        width: 100%;
+        border-radius: 5%;
+    }
+
+    .text-content h1 {
+        font-size: 28px;
+    }
+
+    .text-content p {
+        font-size: 16px;
+    }
+
+    .about-text {
+        font-size: 14px;
+    }
+}
+
+.burger {
+    display: flex;
+}
+
+.menu {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    background-color: #151515;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.menu.show {
+    display: flex;
+}
+
+.menu li {
+    margin: 10px 0;
+}
+
+.menu a {
+    color: white;
+    text-align: center;
+    display: block;
+    padding: 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.menu a:hover {
+    background-color: red;
+}
+
+@media (max-width: 768px) {
+    .burger {
+        display: flex; /* Show burger on small screens */
+    }
+
+    .menu {
+        display: none; /* Hide the menu by default */
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        right: 20px;
+        background-color: #151515;
+        border-radius: 10px;
+        padding: 20px;
+    }
+
+    .menu.show {
+        display: flex; /* Show menu when toggled */
+    }
+
+    .menu li {
+        margin: 10px 0;
+    }
+}
+
+/* For Desktop/Laptop */
+@media (min-width: 769px) {
+    .menu {
+        display: flex !important; /* Always show the menu on larger screens */
+        flex-direction: row;
+        position: static; /* Reset position for larger screens */
+        padding: 0; /* Remove extra padding */
+    }
+
+    .burger {
+        display: none; /* Hide burger on larger screens */
+    }
+}
